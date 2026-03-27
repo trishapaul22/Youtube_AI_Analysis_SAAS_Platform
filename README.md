@@ -1,36 +1,96 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+🚀 HowToYT — AI YouTube Content Assistant
+📌 Overview
 
-## Getting Started
+HowToYT is an AI-powered web application built with Next.js that helps YouTube creators generate content ideas, create thumbnails, analyze trends, and optimize video planning using AI tools.
 
-First, run the development server:
+The platform combines AI automation, modern UI, authentication, and subscription management to provide an all-in-one creator assistant.
 
-```bash
+✨ Features
+🎬 AI Content Generator – Generate video ideas, titles, and scripts.
+🖼️ AI Thumbnail Generator – Create thumbnails using AI prompts.
+🔍 Thumbnail Search – Analyze competitor thumbnails.
+📈 Trending Keywords – Discover trending YouTube topics.
+👤 User Dashboard – Central hub for all tools.
+🔐 Authentication System – Secure user login & protected routes.
+💳 Billing & Subscription – Manage plans and access.
+⚙️ Background Jobs – Async processing using Inngest.
+🧱 Tech Stack
+
+Frontend
+
+Next.js (App Router)
+React
+Tailwind CSS
+ShadCN UI
+
+Backend
+
+Next.js API Routes
+Server Actions
+
+Database
+
+Drizzle ORM + SQL Database
+
+Other Services
+
+AI APIs
+Inngest (event workflows)
+📂 Project Structure
+app/
+ ├── (auth)/              # Authentication pages
+ ├── (routes)/            # Main features
+ │    ├── dashboard
+ │    ├── ai-content-generator
+ │    ├── ai-thumbnail-generator
+ │    ├── trending-keywords
+ │    ├── thumbnail-search
+ │    ├── billing
+ │    └── profile
+ ├── api/                 # Backend APIs
+ ├── layout.tsx
+ └── provider.tsx
+
+components/               # Reusable UI
+lib/                      # Utilities
+services/                 # Business logic
+drizzle/                  # Database schema
+middleware.tsx            # Route protection
+⚙️ Workflow
+User logs in → Authentication verified via middleware.
+User enters Dashboard.
+Selects an AI tool.
+Request sent to backend API.
+AI service processes input.
+Results returned and displayed.
+Data optionally stored in database.
+Login → Dashboard → Select Feature → API → AI Processing → Result
+🔐 Authentication
+Middleware protects private routes.
+Unauthenticated users are redirected to login.
+Sessions control feature access.
+
+🗄️ Database Usage
+Stores:
+User information
+Generated content
+Subscription details
+Usage data
+
+Managed using Drizzle ORM.
+
+▶️ Getting Started
+Install dependencies
+npm install
+Run development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+http://localhost:3000
+🌟 Key Highlights
+Modern Next.js App Router architecture
+AI-powered creator tools
+Secure authentication & billing
+Scalable API-based backend
+Clean component-based UI
